@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="bootstrap1/font/iconfont.css"/>
+	<!--	<script src="app.js"></script>-->
+		<script src="swiper.min.js"></script>
+		<link rel="stylesheet" href="swiper.min.css" />
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				font-size: 62.5%;
+			}
+			header{
+				width:100%;
+				height:6rem;
+				display: flex;
+				/*border: 1px solid;*/
+				justify-content: space-between;
+				
+			}
+			.a2 span{
+				display: inline-block;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.a1 {
+				width:50%;
+			    height:4.5rem;
+			    
+			}
+			.a1 img{
+				width:100%;
+				 height:3.5rem;
+				padding: 0.8rem 0;
+				margin-left: 0.9rem;
+			}
+			.a2{
+				width:30%;
+	           padding:0.8rem 0;
+	           display: flex;
+	           justify-content: space-around;
+			}
+			.a2 span i{
+				font-size: 2.25rem;
+				height:2.2.5rem;
+				color: #999;
+			}
+			.a2 span a{
+				font-size: 1.1rem;
+				color: #999;
+			}
+			.a3{
+				width:100%;
+				height:11.8rem;
+				
+			}
+			.a3 img{
+				width:100%;
+				height:11.8rem;
+			}
+			.a4{
+				width:100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				margin-top: 1.8rem;
+				margin-bottom:0.2rem;
+				border-bottom: 0.9rem solid #cccccc;
+			}
+			.a4 li{
+				width:25%;
+				height:9rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				line-height: 3rem;
+				font-size: 1.4rem;
+				color: #333;
+				margin-bottom: 0.2rem;
+			}
+			.a4 li img{
+				width:6rem;
+				height:6rem;
+			}
+			.a5{
+				width:100%;
+				height:2.4rem;
+				display: flex;
+				padding: 1.6rem 0;
+			}
+			.a6{
+				width:0.25rem;
+				height:2.4rem;
+				background: #38C893;
+				margin-left: 0.9rem;
+				
+			}
+		.a5	p{
+			color:#000;
+			font-size: 1.8rem;
+			margin-left: 0.3rem;
+			}
+			.a5 span{
+				display: block;
+				color: #999;
+				font-size: 1.2rem;
+				margin-top: 0.6rem;
+				margin-left: 0.3rem;
+			}
+			#top{
+				width:95%;
+				height:24rem;
+				
+			}
+			#top img{
+				width:100%;
+				height:20rem;
+				padding:0  0.9rem;
+			}
+			
+		.a7{
+			width:100%;
+			height:5.5rem;
+			display: flex;
+			justify-content: space-around;
+			box-sizing: border-box;
+			border-bottom: 0.9rem solid #cccccc;
+			padding: 1.8rem 0;
+		}	
+		.a7 li{
+			width:100%;
+			display: flex;
+			font-size: 1.4rem;
+			color: #000;
+			margin-left: 2rem;
+			margin-bottom: 1.8rem;
+		}	
+		.a7 li img{
+			width:1.8rem;
+			height:1.8rem;
+		}	
+		.a7 li p{
+			margin-left: 0.5rem;
+		}	
+			.a8{
+				width:100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				position: relative;
+				border-bottom: 0.9rem solid #f4f4f4;
+				
+			}
+			.a8 input{
+				width:29.4rem;
+				height:3.5rem;
+				border: 1px solid #eaeaea ;
+				border-radius: 0.25rem;
+				font-size: 1.4rem;
+				color: #cacaca;
+				margin-top: 1.25rem;
+				
+			}
+			
+			.a8 p:nth-of-type(3) span{
+				position: absolute;
+				right:18px;
+				bottom:93px;
+				font-size: 1.25rem;
+			}
+			.a8 p:nth-of-type(4) input{
+				font-size: 1.8rem;
+				color: white;
+				background: #FEB605;
+				margin-bottom: 1.8rem;
+			}
+			.b1{
+				width:100%;
+				display: flex;
+				justify-content: space-around;
+				
+			}
+			.b1 li{
+				width:30%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				font-size: 1.8rem;
+				color: #000;
+			}
+			.b1 li p{
+				margin-top: 1.25rem;
+			}
+			.b1 li button{
+				margin-top: 1rem;
+				width:6rem;
+				height:1.6rem;
+				font-size: 1.2rem;
+				background: #39C893;
+				color: white;
+				border: none;
+			}
+			.b1 li img{
+				width:7rem;
+				height:7rem;
+			}
+			.b2{
+				width:100%;
+				
+				margin-top: 1.8rem;
+				display: flex;
+				justify-content: space-around;
+				border-bottom: 0.9rem solid #f4f4f4;
+			}
+			.b2 button{
+				width:18rem;
+				height:3.5rem;
+				font-size: 1.4rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #65D4A8;
+				background: white;
+				border: none;
+				border: 1px solid #F1F1F1;
+				margin-bottom:1.8rem ;
+			}
+			.b2 button img{
+				width:1.4rem;
+				height:1.4rem;
+				margin-left: 0.3rem;
+			}
+			
+			
+			.b3{
+				width:100%;
+				display: flex;
+				flex-direction: column;
+				box-sizing: border-box;
+				/*border-bottom: 0.9rem solid #cccccc;*/
+			}
+			.b4{
+				width:100%;
+				display: flex;
+				justify-content: space-around;
+				box-sizing: border-box;
+				position: relative;
+				
+			}
+			.b4 img{
+				width:30.8rem;
+				height:25.3rem;
+			}
+			.b5{
+				width:100%;
+				display: flex;
+				justify-content: space-around;
+				position: relative;
+				
+			}
+			.b5 img{
+				width:14.83rem;
+				height:12.55rem;
+				padding: 0.4rem;
+			}
+			.b4 p{
+				position: absolute;
+				width:3.5rem;
+				height:2.1rem;
+				background: rgba(0,0,0,0.3);
+				text-align: center;
+				line-height: 2.1rem;
+				color: white;
+				bottom:0.3rem;
+				right:1.2rem;
+			}
+			.b5 p:nth-of-type(2) {
+				position: absolute;
+				width:3.5rem;
+				height:2.1rem;
+				background: rgba(0,0,0,0.3);
+				text-align: center;
+				line-height: 2.1rem;
+				color: white;
+				bottom:0.3rem;
+				right:1.2rem;
+			}
+			.b5 p:nth-of-type(1) {
+				position: absolute;
+				width:3.5rem;
+				height:2.1rem;
+				background: rgba(0,0,0,0.3);
+				text-align: center;
+				line-height: 2.1rem;
+				color: white;
+				bottom:0.3rem;
+				left:11.2rem;
+			}
+			.b6{
+				width:100%;
+				display: flex;
+				font-size: 1.4rem;
+				color: #000;
+				margin-left: 0.3rem;
+				margin-top: 0.5rem;
+			}
+			.b6 p:nth-of-type(2){
+				background: #39C893;
+				color: white;
+				margin-left: 0.5rem;
+			}
+			.b8{
+				width:100%;
+				display: flex;
+				flex-direction: column;
+				
+			}
+			.b8 li{
+				width:100%;
+				display: flex;
+				border-bottom: 1px solid #fafafa;
+			}
+			.b8 li .c{
+				width:9.5rem;
+				height:7.25rem;
+				margin-bottom: 1.51rem;
+				margin-top: 1.6rem;
+			}
+			.c img{
+				width:9.5rem;
+				height:7.25rem;
+			}
+			.c1{
+				margin-left: 1.1rem;
+				margin-top: 1.6rem;
+				margin-bottom: 1.51rem;
+			}
+			.c1 p:nth-of-type(1){
+				font-size: 1.8rem;
+				color: #000;
+				height:4.5rem;
+				line-height: 2.5rem;
+			}
+			.c1 p:nth-of-type(2){
+				display: flex;
+				
+				margin-top: 1.1rem;
+			}
+			.c1 p:nth-of-type(2) span{
+				display: inline-block;
+				display: flex;
+				align-items: center;
+				font-size: 1.4rem;
+				color: #999;
+			}
+			.c1 span img{
+				width:1.4rem;
+				height:1.4rem;
+			}
+			.c1 p:nth-of-type(2) span:nth-of-type(2){
+				margin-left: 3.75rem;
+			}
+			.c2 {
+				width:100%;
+				padding: 1.8rem 0;
+				border-bottom: 0.9rem solid #cccccc;
+				
+			}
+			.c2 p{
+				text-indent: 2em;
+				font-size: 1.4rem;
+				color: #333;
+			}
+			.c4{
+				width:100%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				position: relative;
+			}
+			.c8{
+				width:4.7rem;
+				height:4.7rem;
+				position: absolute;
+				
+				right:1.2rem;
+				top:-2.2rem;
+			}
+			.c8 img{
+				width:4.7rem;
+				height:4.7rem;
+			}
+			.c4 p{
+				width:100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.4rem;
+				color: #333;
+				margin-top: 2rem;
+			}
+			.c4 p img{
+				width:1.6rem;
+				height:1.6rem;
+			}
+			.c5{
+				width:100%;
+				display: flex;
+				justify-content: space-around;
+				margin-top: 0.5rem;
+			}
+			.c5 li{
+				font-size: 1.5rem;
+				
+			}
+			.t{
+				width:100%;
+				height:5.3rem;
+				background: rgba(0,0,0,0.6);
+				position: absolute;
+				bottom: 7.3rem;
+				
+				display: flex;
+			}
+			.t1{
+				width:1.9rem;
+				height:1.9rem;
+			}
+			.t1 img{
+				width:1.9rem;
+				height:1.9rem;
+			}
+			.t2{
+			   height:5.3rem;	
+				margin-left: 2.1rem;
+			}
+			.t2 img{
+				height:5.2rem;
+				align-items: center;
+			}
+		
+			.t3 p:nth-of-type(1){
+				font-size: 1.6rem;
+				color: #eed215;
+				margin-top: 0.4rem;
+			}
+			.t3 p:nth-of-type(2){
+				font-size: 1.6rem;
+				color: white;
+				margin-top: 0.4rem;
+			}
+			.t button{
+				width:7.75rem;
+				height:2.5rem;
+				color: white;
+				background: #feb615;
+				border: none;
+				font-size: 1.2rem;
+				border-radius: 30%;
+				margin-left: 1rem;
+				margin-top: 1.2rem;
+			}
+			.c7{
+				width:100%;
+				display: flex;
+				flex-wrap: wrap;
+				position: relative;
+			}
+			.c7 img{
+				width:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--头部-->
+		<header>
+			<div class="a1">
+				<img src="img/logo.png" alt="" />
+			</div>
+			<div class="a2">
+				<span><i class="iconfont icon-mine"></i>
+					<a>我的</a>
+				</span>
+				<span><i class="iconfont icon-liebiao"></i>
+					<a>导航</a>
+				</span>
+			</div>
+		</header>
+		<div class="a3">
+			<img src="img/banner.jpg" alt="" />
+		</div>
+		
+		<ul class="a4">
+			<li>
+				<img src="img/1首页_spec_16.png"/>
+				<p>装修方案</p>
+			</li>
+			<li>
+				<img src="img/1首页_spec_05.png"/>
+				<p>装修方案</p>
+			</li>
+			<li>
+				<img src="img/1首页_spec_07.png"/>
+				<p>装修方案</p>
+			</li>
+			<li>
+				<img src="img/1首页_spec_09.png"/>
+				<p>装修方案</p>
+			</li>
+			<li>
+				<img src="img/1首页_spec_15.png"/>
+				<p>装修方案</p>
+			</li>
+			<li>
+				<img src="img/1首页_spec_16.png"/>
+				<p>装修方案</p>
+			</li>
+			<li>
+				<img src="img/1首页_spec_17.png"/>
+				<p>装修方案</p>
+			</li>
+			<li>
+				<img src="img/1首页_spec_18.png"/>
+				<p>装修方案</p>
+			</li>
+		</ul>
+		
+	<div class="a5">
+		<div class="a6"></div>
+		<p>全屋装修</p>
+		<span>包设计，</span>
+		<span>包主材，</span>
+		<span>包水电，</span>
+		<span>包施工</span>
+	</div>	
+		
+		<div class="swiper-container" id="top">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="img/img1.jpg" alt="" />
+				</div>
+				<div class="swiper-slide">
+					<img src="img/img1.jpg" alt="" />
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		
+		
+		<ul class="a7">
+			<li>
+				<img src="img/03_26.png" alt="" />
+				<p>0增项,标准施</p>
+				
+			</li>
+			<li>
+				<img src="img/03_26.png" alt="" />
+				<p>杜绝项目外包</p>
+			</li>
+			<li>
+				<img src="img/03_29.png" alt="" />
+				<p>装修贷款</p>
+			</li>
+		</ul>
+		
+		<div class="a5">
+		<div class="a6"></div>
+		<p>装修预约</p>
+		<span>免费上门量房，</span>
+		<span>设计方案满意为止</span>
+		
+	</div>	
+		
+	<div class="a8">
+		<p><input type="text" value="小区名"/></p>
+		<p><input type="text" value="手机号"/></p>
+		<p><input type="text" value="建筑面积  "/><span>m2</span></p>
+	    <p><input type="button" value="立即申请"/></p>
+	    
+	</div>	
+		
+		
+	<div class="a5">
+		<div class="a6"></div>
+		<p>设计师</p>
+		
+		
+	</div>		
+		
+	<ul class="b1">
+		<li>
+			<img src="img/c_03.png" alt="" />
+			<p>吴飞柯</p>
+			<button>优秀</button>
+		</li>
+		<li>
+			<img src="img/c_05.png" alt="" />
+			<p>陈彦龙</p>
+			<button>主任</button>
+		</li>
+		<li>
+			<img src="img/c_07.png" alt="" />
+			<p>张海建</p>
+			<button>总监</button>
+		</li>
+		<li>
+			<img src="img/c_09.png" alt="" />
+			<p>陈冲</p>
+			<button>优秀</button>
+		</li>
+	</ul>	
+		
+	<div class="b2">
+		<button>换一换<img src="img/c_04.png" alt="" /></button>
+		<button>更多设计师<img src="img/c_06.png" alt="" /></button>
+	</div>	
+		
+		
+	<div class="a5">
+		<div class="a6"></div>
+		<p>效果图</p>
+		
+	</div>		
+		
+	<div class="b3">
+		<div class="b4">
+			<img src="img/a_03.png" alt="" />
+			<p>客厅</p>
+		</div>
+		<div class="b5">
+			<img src="img/a_05.png" alt="" /><p>客厅</p>
+				<img src="img/a_07.png" alt="" /><p>客厅</p>
+		</div>
+		<div class="b5">
+			<img src="img/a_08.png" alt="" /><p>客厅</p>
+			<img src="img/a_09.png" alt="" /><p>客厅</p>
+		</div>
+	</div>	
+		
+	<div class="b2">
+		<button>换一换<img src="img/c_04.png" alt="" /></button>
+		<button>更多设计师<img src="img/c_06.png" alt="" /></button>
+	</div>	
+		
+		<div class="a5">
+		<div class="a6"></div>
+		<p>工地直播</p>
+		
+	</div>	
+	
+	<div class="b3">
+		<div class="b4">
+			<img src="img/bc_03.png" alt="" />
+			
+		</div>
+		
+	</div>
+	<div class="b6">
+	<p>重汽嘉泽玩7幢</p><p>尼木工程</p>
+	</div>
+	
+	<div class="b2">
+		<button>换一换<img src="img/c_04.png" alt="" /></button>
+		<button>更多工地直播<img src="img/c_06.png" alt="" /></button>
+	</div>	
+	
+	
+	<div class="a5">
+		<div class="a6"></div>
+		<p>装修攻略</p>
+		
+	</div>
+	
+	<ul class="b8">
+		<li>
+			<div class="c">
+				<img src="img/vc_13.png"/>
+			</div>
+			<div class="c1">
+				<p>方子交付要验房，验房师是做什么的？</p>
+				<p><span><img src="img/vc_15.png" alt="" />2017-07-07</span><span><img src="img/vc_09.png" alt="" />115</span></p>
+			</div>
+		</li>
+		<li>
+			<div class="c">
+				<img src="img/vc_06.png"/>
+			</div>
+			<div class="c1">
+				<p>方子交付要验房，验房师是做什么的？</p>
+				<p><span><img src="img/vc_15.png" alt="" />2017-07-07</span><span><img src="img/vc_09.png" alt="" />115</span></p>
+			</div>
+		</li>
+		<li>
+			<div class="c">
+				<img src="img/vc_13.png"/>
+			</div>
+			<div class="c1">
+				<p>遇到有这样房子的男人你就嫁了吧？</p>
+				<p><span><img src="img/vc_15.png" alt="" />2017-07-07</span><span><img src="img/vc_09.png" alt="" />115</span></p>
+			</div>
+		</li>
+	</ul>
+	
+	<div class="b2">
+		<button>换一换<img src="img/c_04.png" alt="" /></button>
+		<button>更多装修攻略<img src="img/c_06.png" alt="" /></button>
+	</div>	
+	
+	
+	
+	<div class="c2">
+		<p>范先生互联网家装有别于创痛装修于其他幢修重加平台，以自营模式整合设计师与项目经理，杜绝项目装包外包，利用互联网将工地进行在想全景直播，通过去中间环节，提供装修套餐+个性化形定制服务</p>
+	</div>
+	
+	
+	<div class="c4">
+		<p><img src="img/03_29.png" alt="" /><span>服务热线：400-9997-658</span></p>
+		<ul class="c5">
+			<li>触屏版</li>
+			<li>电脑版</li>
+			<li>关于我们</li>
+			<li>联系我们</li>
+		</ul>
+		<div class="c8">
+			<img src="img/ec_03.png"/>
+		</div>
+	</div>
+	<div class="c7">
+		<img src="img/ec_06.png" alt="" />
+		<img src="img/ec_06.png" alt="" />
+		<img src="img/ec_06.png" alt="" />
+		<img src="img/ec_06.png" alt="" />
+		<div class="t">
+		<div class="t1">
+			<img src="img/icon_close.png" alt="" />
+		</div>
+		<div class="t2">
+			<img src="img/icon_logo.png" alt="" />
+		</div>
+		<div class="t3">
+			<p>装修报价，只需10秒</p>
+			<p>免费为你装修预算</p>
+		</div>
+		<button>免费获取报名</button>
+	</div>
+	
+	</div>
+	
+	
+	
+	
+		<div style="height:100px;"></div>
+	</body>
+	<script>
+		var app=new Swiper("#top",{
+			autoplay:2000,
+			pagination:".swiper-pagination"
+		})
+	</script>
+</html>
